@@ -29,3 +29,11 @@ def sum_series(n, zero_indx=0, first_indx=1):
     for i in range(n - 1):
         sum_sequence.append(sum_sequence[i] + sum_sequence[i + 1])
     return sum_sequence[n]
+
+
+if __name__ == "__main__":
+    print('This module defines functions that implement mathematical series.')
+    print('\nfibonacci(n):\n\tReturns the nth value in the fibonacci series')
+    print('\nlucas(n):\n\tReturns the nth value in the lucas series')
+    print('\nsum_series(n, zero_inx=0, first_indx=1):\n\tReturns the nth value \
+in the fibonacci series by default or custom sequence with kwargs.')
