@@ -15,7 +15,7 @@ def test_fib(n, result):
 
 
 def test_fib_none():
-    """."""
+    """Testing the fibonnaci function from series module for negative input."""
     from series import fibonacci
     with pytest.raises(ValueError):
         fibonacci(-1)
