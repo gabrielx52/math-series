@@ -10,6 +10,9 @@ LUCAS_TEST_DATA = [(0, 2), (1, 1), (2, 3), (3, 4), (4, 7), (5, 11),
                    (6, 18), (7, 29), (8, 47), (9, 76), (10, 123),
                    (150, 22291846172619859445381409012498)]
 
+SUM_TEST_DATA = [(0, 0, 0, 1), (1, 1, 0, 1), (2, 1, 0, 1),
+                 (0, 2, 2, 1), (1, 1, 2, 1), (2, 3, 2, 1)]
+
 
 @pytest.mark.parametrize("n, result", FIB_TEST_DATA)
 def test_fib(n, result):
@@ -37,3 +40,17 @@ def test_lucas_negative():
     from series import lucas
     with pytest.raises(ValueError):
         lucas(-1)
+
+
+@pytest.mark.parametrize("n, result, zero_indx, first_indx", SUM_TEST_DATA)
+def test_sum_series(n, result, zero_indx, first_indx):
+    """Testing the sum_series function from series module."""
+    from series import sum_series
+    assert sum_series(n, zero_indx, first_indx) == result
+
+
+def test_sum_negative():
+    """Test the sum_series function from series module for negative input."""
+    from series import sum_series
+    with pytest.raises(ValueError):
+        sum_series(-1)
