@@ -12,3 +12,10 @@ def test_fib(n, result):
     """Testing the fibonnaci function from series module."""
     from series import fibonacci
     assert fibonacci(n) == result
+
+
+def test_fib_none():
+    """."""
+    from series import fibonacci
+    with pytest.raises(ValueError):
+        fibonacci(-1)
