@@ -10,12 +10,12 @@ def test_fib_0():
 
 
 def test_fib_1():
-    """Testing that the first index of fib is one"""
+    """Testing that the first index of fib is one."""
     from series import fibonacci
     assert fibonacci(1) == 1
 
 
 def test_fib_2():
-    """Testing that the second index of fib is two"""
+    """Testing that the second index of fib is two."""
     from series import fibonacci
     assert fibonacci(2) == 1
