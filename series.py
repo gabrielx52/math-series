@@ -2,7 +2,7 @@
 
 
 def fibonacci(n):
-    """Create fib sequence up to nth."""
+    """Create fib sequence up to nth index."""
     fib_sequence = [0, 1]
     if n < 0:
         raise ValueError("Please input positive integers only.")
