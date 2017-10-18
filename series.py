@@ -34,6 +34,12 @@ def sum_series(n, zero_indx=0, first_indx=1):
 if __name__ == "__main__":
     print('This module defines functions that implement mathematical series.')
     print('\nfibonacci(n):\n\tReturns the nth value in the fibonacci series')
+    print('\n>>> fibonacci(1)')
+    print(fibonacci(1))
     print('\nlucas(n):\n\tReturns the nth value in the lucas series')
+    print('\n>>> lucas(17)')
+    print(lucas(17))
     print('\nsum_series(n, zero_inx=0, first_indx=1):\n\tReturns the nth value \
 in the fibonacci series by default or custom sequence with kwargs.')
+    print("\n>>> sum_series(7, 4, 2)")
+    print(sum_series(7, 4, 2))
